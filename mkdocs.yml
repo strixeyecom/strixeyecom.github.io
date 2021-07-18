@@ -7,6 +7,9 @@ theme:
   custom_dir: overrides
   logo: assets/images/white.svg
   favicon: assets/images/purple.png
+  font:
+    text: Ubuntu
+    code: Ubuntu mono
 
   palette:
     - media: "(prefers-color-scheme: dark)"
@@ -26,8 +29,8 @@ nav:
   - Getting Started: index.md
   - Installation: installation.md
   - Triggers:
-    - Create Trigger: triggers/create.md
-    - Delete Trigger: triggers/delete.md
+      - Create Trigger: triggers/create.md
+      - Delete Trigger: triggers/delete.md
 
 # Plugins
 plugins:
@@ -85,4 +88,3 @@ extra:
       link: https://twitter.com/StrixEye
     - icon: fontawesome/brands/linkedin
       link: https://linkedin.com/company/strixeye
-
