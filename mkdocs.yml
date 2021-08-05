@@ -1,5 +1,5 @@
 site_name: StrixEye
-site_url: https://example.com/
+site_url: https://docs.strixeye.com
 extra_css:
   - assets/stylesheets/extra.css
 theme:
