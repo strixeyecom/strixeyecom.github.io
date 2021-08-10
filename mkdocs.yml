@@ -26,11 +26,30 @@ theme:
 
 # Navigation
 nav:
-  - Getting Started: index.md
+  - Welcome: index.md
+  - Introduction: introduction.md
   - Installation: installation.md
-  - Triggers:
-      - Create Trigger: triggers/create.md
-      - Delete Trigger: triggers/delete.md
+  # - In-Depth Dashboard: 
+  #     - Dashboard: triggers/delete.md
+  #     - Suspicions: triggers/delete.md
+  #     - Agents: triggers/delete.md
+  #     - Domains: triggers/delete.md
+  #     - Integrations: triggers/delete.md
+  #     - Trigger Rules: triggers/delete.md
+  #     - Users: triggers/delete.md
+  #     - Roles: triggers/delete.md
+  #     - Activity Logs: triggers/delete.md
+  #     - Profile: triggers/delete.md
+  #     - Company Info: triggers/delete.md
+  # - In-Depth Agent:
+  #     - Cli: triggers/delete.md
+  #     - Agent: triggers/delete.md
+  # - Mirror Requests:
+  #     - NGINX: triggers/delete.md
+  #     - Apache: triggers/delete.md
+  #     - IIS: triggers/delete.md
+  #     - AWS Load Balancer: triggers/delete.md
+  #     - Traefik: triggers/delete.md
 
 # Plugins
 plugins:
