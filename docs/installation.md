@@ -28,24 +28,28 @@ Give a name and select Domains that you want to analyzing with the new Agent. Ea
 
 To install StrixEye Agent, you need docker and docker-compose.
 
-You can download StrixEye Cli from [GitHub](https://github.com/strixeyecom/cli/releases).
+Download StrixEye Cli from [GitHub](https://github.com/strixeyecom/cli/releases) and extract to ``/usr/local/bin``
 
 ```bash
-sudo ./strixeye agent install --interactive
+sudo tar -xvzf cli_0.0.1_Linux_amd64.tar.gz -C /usr/local/bin strixeye && sudo chmod +x /usr/local/bin/strixeye
 ```
 
-You need your user api token and your Agent id. You can access your api token in [Dashboard > Profile](https://dashboard.usestrix.com/settings/profile) page and Agent id in Agent detail page.
+For more information about StrixEye Cli, visit Cli Documentation.
+
+```bash
+sudo strixeye agent install --interactive
+```
+
+You need your user API token and your Agent ID. You can access your API token in [Dashboard > Profile](https://dashboard.usestrix.com/settings/profile) page and Agent ID in Agent detail page.
 
 ![agent installation](assets/images/agent_install.png)
 
 If you get an error, visit the CLI troubleshooting page.
 
-
 After Agent installation, reload daemon and start **strixeyed**.
+
 ```bash
-sudo systemctl daemon-reload
-sudo systemctl start strixeyed
-sudo systemctl enable strixeyed
+sudo systemctl daemon-reload && sudo systemctl enable strixeyed && sudo systemctl start strixeyed
 ```
 
 This may takes several minutes. If everythink is okay, you will see Agent statistics on Agent detail page and dashboard.
