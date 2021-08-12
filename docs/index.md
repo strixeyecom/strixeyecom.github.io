@@ -2,7 +2,7 @@
 
 StrixEye is a behaviour analyzing tool for your web applications that can detect attackers before they intend to. It receives request without blocking request-response cycle and detect attackers. In this way, it does not cause performance loss. 
 
-![alt text](assets/images/strixeye_topology.png "Topology")
+![strixeye architecture](assets/images/strixeye_architecture.png)
 
 Our profiling algorithm searches for all requests and identify each request owner. Then we analyze all profiles and assign scores to profiles based on their behavior.
 
