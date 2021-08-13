@@ -27,8 +27,8 @@ theme:
 # Navigation
 nav:
   - Welcome: index.md
-  - Introduction: introduction.md
   - Installation: installation.md
+  - Configure Trigger and Integration: configure_trigger_integration.md
   # - In-Depth Dashboard: 
   #     - Dashboard: triggers/delete.md
   #     - Suspicions: triggers/delete.md

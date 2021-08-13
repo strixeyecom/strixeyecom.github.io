@@ -4,7 +4,7 @@ StrixEye is a behaviour analyzing tool for your web applications that can detect
 
 ![strixeye architecture](assets/images/strixeye_architecture.png)
 
-Our profiling algorithm searches for all requests and identify each request owner. Then we analyze all profiles and assign scores to profiles based on their behavior.
+Our profiling algorithm searches for all requests and identify each request owner. Then our analyzing algorithms analyze all profiles and assign scores to profiles based on their behavior.
 
 If a profile is detected as an attacker, a warning is generated and admins can get actions for this user. If you want, you use automated ban rules for your WAF or Load Balancer.
 

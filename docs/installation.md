@@ -28,13 +28,13 @@ Give a name and select Domains that you want to analyzing with the new Agent. Ea
 
 To install StrixEye Agent, you need docker and docker-compose.
 
-Download StrixEye Cli from [GitHub](https://github.com/strixeyecom/cli/releases) and extract to ``/usr/local/bin``
+Download StrixEye CLI from [GitHub](https://github.com/strixeyecom/cli/releases) and extract to ``/usr/local/bin``
 
 ```bash
 sudo tar -xvzf cli_0.0.1_Linux_amd64.tar.gz -C /usr/local/bin strixeye && sudo chmod +x /usr/local/bin/strixeye
 ```
 
-For more information about StrixEye Cli, visit Cli Documentation.
+<!-- For more information about StrixEye CLI, visit CLI Documentation. -->
 
 ```bash
 sudo strixeye agent install --interactive
@@ -44,7 +44,7 @@ You need your user API token and your Agent ID. You can access your API token in
 
 ![agent installation](assets/images/agent_install.png)
 
-If you get an error, visit the CLI troubleshooting page.
+<!-- If you get an error, visit the CLI troubleshooting page. -->
 
 After Agent installation, reload daemon and start **strixeyed**.
 
@@ -52,15 +52,15 @@ After Agent installation, reload daemon and start **strixeyed**.
 sudo systemctl daemon-reload && sudo systemctl enable strixeyed && sudo systemctl start strixeyed
 ```
 
-This may takes several minutes. If everythink is okay, you will see Agent statistics on Agent detail page and dashboard.
+This may takes several minutes. If everythink is OK, you will see Agent statistics on Agent detail page and dashboard.
 
 ![agent statistics](assets/images/agent_stats.png)
 
-## Mirror Requests
+## Mirror Requests to StrixEye Agent
 
-StrixEye is outside of the request response cycle. You must mirror all requests to your application to StrixEye. You can do this in your load balancer, WAF or firewall.
+StrixEye is outside of the request response cycle. You must mirror all incoming requests to StrixEye. You can do this in your load balancer, WAF or firewall.
 
-![strixeye architecture](assets/images/strixeye_architecture.png)
+![strixeye architecture](assets/images/strixeye_architecture_mirror.png)
 
 For example, you can access Nginx Mirror documentation [here.](https://nginx.org/en/docs/http/ngx_http_mirror_module.html) 
 
@@ -81,38 +81,7 @@ If everything is OK, you can see Agent statistics on Agent detail page or dashbo
 ![Agent statistics with requests](assets/images/agent_success.png)
 
 
-We configured Dashboard, installed Agent and mirrored requests to Agent. Now, Agent starts autamtically detect suspects and suspicions. If you don't know what is suspect and suspicion, you can read Suspect and Suspicion page.
+We configured Dashboard, installed Agent and mirrored requests to Agent. Now, Agent starts autamtically detect suspects and suspicions. 
 
-## Configure Trigger and Integration
+<!-- If you don't know what is suspect and suspicion, you can read Suspect and Suspicion page. -->
 
-When a suspect detected, you can get an action manually, but this is useless. For this, we developed Trigger and Integration mechanisms. Basically, triggers are set of rules. Integrations are actions when a trigger is triggered. For example, you create an Email Integration, and you create a Trigger Rule. When a Suspect detected and this Trigger triggered, you get an email about this suspect.
-
-### Create Integration
-
-To create an Integration, go to ``Integrations > Create New Integration``
-
-![sidebar integrations button > create new integration button](assets/images/integrations_create.png)
-
-Then, select an Integration type. **Incident Response** integrations are active Integrations. For example, when a suspect detected, AWS WAF Integration can automatically ban this suspect.
-
-**Notification** Integrations are pasive integrations. For example, when a suspect detected, Email Integration sends an email.
-
-![select inregration type](assets/images/integration_select.png)
-
-When an Integration created, you must verify it. Visit the Integration detail page and click the **Integrate** button. 
-
-![integrate button](assets/images/integrate_button.png)
-
-If successfully integrated, you can start using it. 
-
-![integrated](assets/images/integrated.png)
-
-### Trigger
-
-To create a trigger, go to ``Triggers > Create New Trigger``
-
-![sidebar triggers create button > create new trigger button](assets/images/triggers_create.png)
-
-Then, set a trigger rule and select an Integration. 
-
-![trigger rule](assets/images/trigger_rule.png)

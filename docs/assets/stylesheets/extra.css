@@ -57,3 +57,9 @@
 .md-nav--primary .md-nav__title .md-logo svg {
   width: unset;
 }
+
+p>img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
