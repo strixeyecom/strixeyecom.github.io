@@ -19,7 +19,7 @@ Before the install Agent to server, you must create an Agent from Dashboard. Sel
 
 ![sidebar agents button > create new agent button](assets/images/agents_sidebar.png)
 
-Give a name and select Domains that you want to analyzing with the new Agent. Each Agent must have minimum one Domain. You can add multiple Domains to a Agent.
+Give a name and select Domains that you want to analyzing with the new Agent. Each Agent must have minimum one Domain. You can add multiple Domains to an Agent.
 
 ![agent name and agent domains](assets/images/agent_create.png)
 
