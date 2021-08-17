@@ -3,7 +3,7 @@
 If you have beta access to StrixEye, you can start with this section.
 
 ## Configure Dashboard
-You can access dashboard from [dashboard.strixeye.com](https://dashboard.strixeye.com)
+You can access dashboard from [dashboard.strixeye.com](https://dashboard.strixeye.com){:target="_blank"}
 
 ### Create your Domains
 
@@ -26,12 +26,12 @@ Give a name and select Domains that you want to analyzing with the new Agent. Ea
 
 ## Install Agent to your server
 
-To install StrixEye Agent, you need docker and docker-compose.
+To install StrixEye Agent, you need [Docker](https://docs.docker.com/engine/install/){:target="_blank"} and [Docker Compose](https://docs.docker.com/compose/install/){:target="_blank"}.
 
-Download StrixEye CLI from [GitHub](https://github.com/strixeyecom/cli/releases) and extract to ``/usr/local/bin``
+Download StrixEye CLI from [GitHub](https://github.com/strixeyecom/cli/releases){:target="_blank"} and extract to ``/usr/local/bin``
 
 ```bash
-sudo tar -xvzf cli_0.0.1_Linux_amd64.tar.gz -C /usr/local/bin strixeye && sudo chmod +x /usr/local/bin/strixeye
+sudo tar -xvzf cli_${cli_version}_Linux_amd64.tar.gz -C /usr/local/bin strixeye && sudo chmod +x /usr/local/bin/strixeye
 ```
 
 <!-- For more information about StrixEye CLI, visit CLI Documentation. -->
@@ -40,7 +40,7 @@ sudo tar -xvzf cli_0.0.1_Linux_amd64.tar.gz -C /usr/local/bin strixeye && sudo c
 sudo strixeye agent install --interactive
 ```
 
-You need your user API token and your Agent ID. You can access your API token in [Dashboard > Profile](https://dashboard.usestrix.com/settings/profile) page and Agent ID in Agent detail page.
+You need your user API token and your Agent ID. You can access your API token in [Dashboard > Profile](https://dashboard.strixeye.com/settings/profile){:target="_blank"} page and Agent ID in Agent detail page.
 
 ![agent installation](assets/images/agent_install.png)
 
@@ -62,7 +62,7 @@ StrixEye is outside of the request response cycle. You must mirror all incoming 
 
 ![strixeye architecture](assets/images/strixeye_architecture_mirror.png)
 
-For example, you can access Nginx Mirror documentation [here.](https://nginx.org/en/docs/http/ngx_http_mirror_module.html) 
+For example, you can access Nginx Mirror documentation [here.](https://nginx.org/en/docs/http/ngx_http_mirror_module.html){:target="_blank"}
 
 !!! Warning "Mirror Request Headers"
     You need to add two headers to mirrored requests.
