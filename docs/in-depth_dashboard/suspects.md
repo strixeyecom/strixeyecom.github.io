@@ -2,6 +2,12 @@
 
 Our goal is to detect a Suspect from its behavior, even if it uses VPN, changes browser, changes IP, or uses Tor. You can see the details of the Suspect on the Suspect page. 
 
+## Index Page
+
+[Suspects](https://dashboard.strixeye.com/suspects) page lists all detected suspects.
+
+![agent name and agent domains](../assets/images/suspects.png)
+
 ## Edit Name
 Suspect names are randomly generated. If a suspect has caught your attention, you can change its name to make it easier to follow it.
 
