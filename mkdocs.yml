@@ -29,9 +29,9 @@ nav:
   - Welcome: index.md
   - Installation: installation.md
   - Configure Trigger and Integration: configure_trigger_integration.md
-  # - In-Depth Dashboard: 
-  #     - Dashboard: triggers/delete.md
-  #     - Suspicions: triggers/delete.md
+  - In-Depth Dashboard: 
+      # - Dashboard: in-depth_dashboard/dashboard.md
+      - Suspects: in-depth_dashboard/suspects.md
   #     - Agents: triggers/delete.md
   #     - Domains: triggers/delete.md
   #     - Integrations: triggers/delete.md
