@@ -37,7 +37,7 @@ nav:
       - Domains: in-depth_dashboard/domains.md
   #     - Integrations: triggers/delete.md
   #     - Trigger Rules: triggers/delete.md
-  #     - Users: triggers/delete.md
+      - Users: in-depth_dashboard/users.md
   #     - Roles: triggers/delete.md
   #     - Activity Logs: triggers/delete.md
   #     - Profile: triggers/delete.md
