@@ -38,7 +38,7 @@ nav:
   #     - Integrations: triggers/delete.md
   #     - Trigger Rules: triggers/delete.md
       - Users: in-depth_dashboard/users.md
-  #     - Roles: triggers/delete.md
+      - Roles: in-depth_dashboard/roles.md
   #     - Activity Logs: triggers/delete.md
   #     - Profile: triggers/delete.md
   #     - Company Info: triggers/delete.md
