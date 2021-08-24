@@ -40,7 +40,7 @@ nav:
       - Users: in-depth_dashboard/users.md
       - Roles: in-depth_dashboard/roles.md
       - Profile: in-depth_dashboard/profile.md
-  #     - Company Info: triggers/delete.md
+      - Company Info: in-depth_dashboard/company_info.md
   # - In-Depth Agent:
   #     - Cli: triggers/delete.md
   #     - Agent: triggers/delete.md
