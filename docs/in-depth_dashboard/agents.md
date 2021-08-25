@@ -1,10 +1,10 @@
 # Agents
 
-You can access the Agents page [here](https://dashboard.strixeye.com/agents){:target="_blank"}.
+You can see all Agents on the [Agents](https://dashboard.strixeye.com/agents){:target="_blank"} page.
 
 ![agent name and agent domains](../assets/images/agents.png)
 
-## Create a new Agent
+## Create Agent
 
 Before installing StrixEye Agent to your server, you must first create an Agent from Dashboard.
 
@@ -26,7 +26,7 @@ If you want to mirror over HTTPS, you need to turn on the **Use HTTPS** switch a
 
 **Runtime Environment** field specifies which runtime environment you want to use. We only support Docker and Kubernetes for now. If you want to use Kubernetes, you can use your own config file.
 
-## Agent Detail Page
+## Agent Details
 
 ### Agent Statistics Chart
 
