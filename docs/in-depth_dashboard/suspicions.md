@@ -2,7 +2,7 @@
 
 Suspicious acts are an attempt to attack by a suspect. Each Suspicion has a score and if a Suspicion detected, Suspect's score increased as Suspicion score. 
 
-You can see all Suspicions on the [Suspicions](https://dashboard.strixeye.com/suspicions) page.
+You can see all Suspicions on the [Suspicions](https://dashboard.strixeye.com/suspicions){:target="_blank"} page.
 
 ![agent name and agent domains](../assets/images/suspicions.png)
 

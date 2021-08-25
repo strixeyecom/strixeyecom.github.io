@@ -2,7 +2,7 @@
 
 Our goal is to detect a Suspect from its behavior, even if it uses VPN, changes browser, changes IP or uses Tor. 
 
-You can see all Suspects on the [Suspects](https://dashboard.strixeye.com/suspects) page.
+You can see all Suspects on the [Suspects](https://dashboard.strixeye.com/suspects){:target="_blank"} page.
 
 ![agent name and agent domains](../assets/images/suspects.png)
 
