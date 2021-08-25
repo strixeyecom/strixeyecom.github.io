@@ -18,14 +18,14 @@ After sending the invitation, new user  first reset the password and then verify
 
 ### Edit User
 
-![agent name and agent domains](../assets/images/user_edit.png)
-
 Users itself or admins can edit users. User's name, password, profile picture, role and language changable.
+
+![agent name and agent domains](../assets/images/user_edit.png)
 
 If you delete a user, you won't be able to revert this! **Be careful when deleting a user!**
 
 ### Activity Logs
 
-![agent name and agent domains](../assets/images/user_activity_logs.png)
+You can see the User actions in the Activity Logs table.
 
-You can see the User actions in the Activity Logs table. 
+![agent name and agent domains](../assets/images/user_activity_logs.png)
