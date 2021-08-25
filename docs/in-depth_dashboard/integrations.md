@@ -1,6 +1,6 @@
 # Integrations
 
-You can access the Integrations page [here](https://dashboard.strixeye.com/integrations){:target="_blank"}.
+You can see all Integrations on the [Domains](https://dashboard.strixeye.com/integrations){:target="_blank"} page.
 
 ![agent name and agent domains](../assets/images/integrations.png)
 
