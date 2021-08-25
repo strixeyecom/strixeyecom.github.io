@@ -2,7 +2,7 @@
 
 StrixEye Dashboard supports powerful users and permission system. You can create multiple users and permission levels.
 
-You can access the Users page [here](https://dashboard.strixeye.com/users){:target="_blank"}.
+You can see all Users on the [Users](https://dashboard.strixeye.com/users){:target="_blank"} page.
 
 ![agent name and agent domains](../assets/images/users.png)
 
@@ -28,4 +28,4 @@ If you delete a user, you won't be able to revert this! **Be careful when deleti
 
 ![agent name and agent domains](../assets/images/user_activity_logs.png)
 
-You can see the actions taken by the User in the Activity Logs table. 
+You can see the User actions in the Activity Logs table. 
