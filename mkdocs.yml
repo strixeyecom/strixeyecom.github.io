@@ -35,7 +35,7 @@ nav:
       - Suspicions: in-depth_dashboard/suspicions.md
       - Agents: in-depth_dashboard/agents.md
       - Domains: in-depth_dashboard/domains.md
-  #     - Integrations: triggers/delete.md
+      - Integrations: in-depth_dashboard/integrations.md
       - Trigger Rules: in-depth_dashboard/trigger_rules.md
       - Users: in-depth_dashboard/users.md
       - Roles: in-depth_dashboard/roles.md
