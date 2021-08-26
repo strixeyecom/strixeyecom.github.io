@@ -6,7 +6,7 @@ You can access the Profile page [here](https://dashboard.strixeye.com/profile){:
 
 ![agent name and agent domains](../assets/images/profile.png)
 
-You can change your name, password or profile picture from profile page.
+You can change your name, password or profile picture from Profile page.
 
 ## User API Token
 
