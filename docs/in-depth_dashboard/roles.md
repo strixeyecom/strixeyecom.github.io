@@ -2,7 +2,7 @@
 
 Roles supports powerful permission system. 
 
-You can access the Roles page [here](https://dashboard.strixeye.com/roles){:target="_blank"}.
+You can see all Roles on the [Roles](https://dashboard.strixeye.com/roles){:target="_blank"} page.
 
 ![agent name and agent domains](../assets/images/roles.png)
 
@@ -26,8 +26,10 @@ Permissions listed in severel title and each title contains multiple permission.
 
 **delete** permission is for deleting an element. If you don't have agents.delete permission, you can't delete an Agent.
 
-## Edit Role
+## Role Details
+
+You can edit or delete the Role on Role details page.
+
+### Edit Role
 
 ![agent name and agent domains](../assets/images/role_edit.png)
-
-You can change a Role's name, delete a Role or Role permissions from Role detail page.
