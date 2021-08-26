@@ -1541,7 +1541,7 @@
       "parentId": "__WORKSPACE_ID__",
       "name": "StrixEye Environment",
       "data": {
-        "base_url": "https://api.usestrix.com"
+        "base_url": "https://api.strixeye.com"
       },
       "dataPropertyOrder": null,
       "color": null,
