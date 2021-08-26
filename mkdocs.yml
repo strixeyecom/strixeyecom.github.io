@@ -2,8 +2,6 @@ site_name: StrixEye Documentation
 site_url: https://docs.strixeye.com
 extra_css:
   - assets/stylesheets/extra.css
-extra_javascript:
-  - assets/extra.js
 
 theme:
   name: material
