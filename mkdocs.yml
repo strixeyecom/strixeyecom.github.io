@@ -2,6 +2,9 @@ site_name: StrixEye
 site_url: https://docs.strixeye.com
 extra_css:
   - assets/stylesheets/extra.css
+extra_javascript:
+  - assets/extra.js
+
 theme:
   name: material
   custom_dir: overrides
@@ -23,6 +26,8 @@ theme:
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
+  features:
+    - navigation.expand
 
 # Navigation
 nav:
