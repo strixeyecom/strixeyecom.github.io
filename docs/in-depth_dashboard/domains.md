@@ -11,7 +11,7 @@ You can create a new domain in [Domain Create page](https://dashboard.strixeye.c
 
 ![agent name and agent domains](../assets/images/domains_create.png)
 
-**Ignored Endpoints** fields allow you to filter requests from that domain. For example, if you don't want to analyze all requests under ``/statics/`` path, you can add ``/statics/`` paths to ``Ignored Paths`` fields. There may be some predefined paths, be careful when creating a domain.
+**Ignored Paths** fields allow you to filter requests from that domain. For example, if you don't want to analyze all requests under ``/statics/`` path, you can add ``/statics/`` paths to ``Ignored Paths`` fields. There may be some predefined paths, be careful when creating a domain.
 
 ## Domain Details
 
