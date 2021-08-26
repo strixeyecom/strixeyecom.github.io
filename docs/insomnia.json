@@ -1,7 +1,7 @@
 {
   "_type": "export",
   "__export_format": 4,
-  "__export_date": "2021-08-26T11:46:17.907Z",
+  "__export_date": "2021-08-26T14:51:02.049Z",
   "__export_source": "insomnia.importers:v0.1.0",
   "resources": [
     {
@@ -45,7 +45,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/suspects",
+      "_id": "all-suspects",
       "_type": "request",
       "description": "",
       "method": "GET"
@@ -69,7 +69,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/suspects/{{suspect_id}}",
+      "_id": "show-suspect",
       "_type": "request",
       "description": "",
       "method": "GET"
@@ -100,7 +100,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/suspicions",
+      "_id": "all-suspicions",
       "_type": "request",
       "description": "",
       "method": "GET"
@@ -124,7 +124,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/suspicions?suspect_id={{suspect_id}}",
+      "_id": "get-suspicions-by-suspect",
       "_type": "request",
       "description": "",
       "method": "GET"
@@ -148,7 +148,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/suspicions/{{suspicion_id}}",
+      "_id": "show-suspicion",
       "_type": "request",
       "description": "",
       "method": "GET"
@@ -172,7 +172,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/suspicions/{{suspicion_id}}/history",
+      "_id": "show-suspicion-history",
       "_type": "request",
       "description": "",
       "method": "GET"
@@ -203,7 +203,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/agents",
+      "_id": "all-agents",
       "_type": "request",
       "description": "",
       "method": "GET"
@@ -214,7 +214,7 @@
       "url": "{{base_url}}/agents",
       "body": {
         "mimeType": "application/json",
-        "text": "{\n    \"name\": \"New agent\",\n    \"domains\": [\n        \"{{domain_id}}\"\n    ],\n    \"config\": {\n        \"addresses\": {\n            \"connector_scheme\": null,\n            \"connector_address\": null,\n            \"connector_port\": null\n        },\n        \"use_https\": null,\n        \"deployment\": \"docker\",\n        \"database\": {\n            \"db_enabled\": \"on\",\n            \"db_addr\": null,\n            \"db_user\": null,\n            \"db_pass\": null,\n            \"db_root_pass\": null,\n            \"db_name\": null,\n            \"db_port\": null\n        },\n        \"broker\": {\n            \"broker_enabled\": \"on\",\n            \"broker_hostname\": null,\n            \"broker_username\": null,\n            \"broker_prefix\": null,\n            \"broker_password\":null,\n            \"broker_port\": null\n        },\n        \"scheduler\": {\n            \"scheduler_listen\": null,\n            \"scheduler_host\": null\n        },\n        \"engine\": {\n            \"address\": null,\n            \"engine_listen\": null\n        },\n        \"sensor\": {\n            \"ip_source\": {\n                \"ip_source_method\": \"header\",\n                \"ip_source_header_name\": \"X-Forwarded-For\",\n                \"ip_source_header_value_index\": 2\n            },\n            \"sensor_listen\": 32122\n        },\n        \"profiler\": {\n            \"profiler_listen\": null\n        },\n        \"intervals\": {\n            \"system_stats_interval_second\": 1\n        },\n        \"paths\": {\n            \"kube_config\": null,\n            \"tls_keys\": {\n                \"certificate\": null,\n                \"key\": null\n            }\n        }\n    }\n}"
+        "text": "{\n    \"name\": \"New agent\",\n    \"domains\": [\n        \"{{domain_id}}\"\n    ],\n    \"config\": {\n        \"addresses\": {\n            \"connector_scheme\": null,\n            \"connector_address\": null,\n            \"connector_port\": null\n        },\n        \"use_https\": null,\n        \"deployment\": \"docker\",\n        \"database\": {\n            \"db_enabled\": \"on\",\n            \"db_addr\": null,\n            \"db_user\": null,\n            \"db_pass\": null,\n            \"db_root_pass\": null,\n            \"db_name\": null,\n            \"db_port\": null\n        },\n        \"broker\": {\n            \"broker_enabled\": \"on\",\n            \"broker_hostname\": null,\n            \"broker_username\": null,\n            \"broker_prefix\": null,\n            \"broker_password\":null,\n            \"broker_port\": null\n        },\n        \"scheduler\": {\n            \"scheduler_listen\": null,\n            \"scheduler_host\": null\n        },\n        \"engine\": {\n            \"address\": null,\n            \"engine_listen\": null\n        },\n        \"sensor\": {\n            \"ip_source\": {\n                \"method\": \"header\",\n                \"header_name\": \"X-Forwarded-For\",\n                \"header_value_index\": 2\n            },\n            \"port_source\": {\n                \"method\": \"header\",\n                \"header_name\": \"X-Forwarded-Port\",\n                \"header_value_index\": 2\n            },\n            \"sensor_listen\": 32122\n        },\n        \"profiler\": {\n            \"profiler_listen\": null\n        },\n        \"intervals\": {\n            \"system_stats_interval_second\": 1\n        },\n        \"paths\": {\n            \"kube_config\": null,\n            \"tls_keys\": {\n                \"certificate\": null,\n                \"key\": null\n            }\n        }\n    }\n}"
       },
       "parameters": [],
       "headers": [
@@ -230,9 +230,9 @@
         }
       ],
       "authentication": {},
-      "_id": "/agents",
+      "_id": "create-agent",
       "_type": "request",
-      "description": "**Attention!** `config` field is advanced field. Please don't fill fields before didn't get support.\n\nSupported deployments; (`config.deployment`)\n* `docker`\n* `kubernetes`\n\nSupported IP source methods; (`config.sensor.ip_source.method`)\n* tcp\n* header",
+      "description": "**Attention!** `config` field is advanced field. Please don't fill fields before didn't get support.\n\nSupported deployments; (`config.deployment`)\n* `docker`\n* `kubernetes`\n\nSupported IP and Port source methods; (`config.sensor.ip_source.method`, `config.sensor.port_source.method`)\n* tcp\n* header",
       "method": "POST"
     },
     {
@@ -254,7 +254,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/agents/{{agent_id}}",
+      "_id": "show-agent",
       "_type": "request",
       "description": "",
       "method": "GET"
@@ -265,7 +265,7 @@
       "url": "{{base_url}}/agents/{{agent_id}}",
       "body": {
         "mimeType": "application/json",
-        "text": "{\n    \"name\": \"Updated agent\",\n    \"domains\": [\n        \"{{domain_id}}\"\n    ],\n    \"config\": {\n        \"addresses\": {\n            \"connector_scheme\": null,\n            \"connector_address\": null,\n            \"connector_port\": null\n        },\n        \"use_https\": null,\n        \"deployment\": \"docker\",\n        \"database\": {\n            \"db_enabled\": \"on\",\n            \"db_addr\": null,\n            \"db_user\": null,\n            \"db_pass\": null,\n            \"db_root_pass\": null,\n            \"db_name\": null,\n            \"db_port\": null\n        },\n        \"broker\": {\n            \"broker_enabled\": \"on\",\n            \"broker_hostname\": null,\n            \"broker_username\": null,\n            \"broker_prefix\": null,\n            \"broker_password\":null,\n            \"broker_port\": null\n        },\n        \"scheduler\": {\n            \"scheduler_listen\": null,\n            \"scheduler_host\": null\n        },\n        \"engine\": {\n            \"address\": null,\n            \"engine_listen\": null\n        },\n        \"sensor\": {\n            \"ip_source\": {\n                \"method\": \"tcp\",\n                \"header_name\": null,\n                \"header_value_index\": null\n            },\n            \"sensor_listen\": 32122\n        },\n        \"profiler\": {\n            \"profiler_listen\": null\n        },\n        \"intervals\": {\n            \"system_stats_interval_second\": 1\n        },\n        \"paths\": {\n            \"kube_config\": null,\n            \"tls_keys\": {\n                \"certificate\": null,\n                \"key\": null\n            }\n        }\n    }\n}"
+        "text": "{\n    \"name\": \"Updated agent\",\n    \"domains\": [\n        \"{{domain_id}}\"\n    ],\n    \"config\": {\n        \"addresses\": {\n            \"connector_scheme\": null,\n            \"connector_address\": null,\n            \"connector_port\": null\n        },\n        \"use_https\": null,\n        \"deployment\": \"docker\",\n        \"database\": {\n            \"db_enabled\": \"on\",\n            \"db_addr\": null,\n            \"db_user\": null,\n            \"db_pass\": null,\n            \"db_root_pass\": null,\n            \"db_name\": null,\n            \"db_port\": null\n        },\n        \"broker\": {\n            \"broker_enabled\": \"on\",\n            \"broker_hostname\": null,\n            \"broker_username\": null,\n            \"broker_prefix\": null,\n            \"broker_password\":null,\n            \"broker_port\": null\n        },\n        \"scheduler\": {\n            \"scheduler_listen\": null,\n            \"scheduler_host\": null\n        },\n        \"engine\": {\n            \"address\": null,\n            \"engine_listen\": null\n        },\n        \"sensor\": {\n            \"ip_source\": {\n                \"method\": \"tcp\",\n                \"header_name\": null,\n                \"header_value_index\": null\n            },\n            \"port_source\": {\n                \"method\": \"tcp\",\n                \"header_name\": null,\n                \"header_value_index\": null\n            },\n            \"sensor_listen\": 32122\n        },\n        \"profiler\": {\n            \"profiler_listen\": null\n        },\n        \"intervals\": {\n            \"system_stats_interval_second\": 1\n        },\n        \"paths\": {\n            \"kube_config\": null,\n            \"tls_keys\": {\n                \"certificate\": null,\n                \"key\": null\n            }\n        }\n    }\n}"
       },
       "parameters": [],
       "headers": [
@@ -281,9 +281,9 @@
         }
       ],
       "authentication": {},
-      "_id": "/agents/{{agent_id}}",
+      "_id": "update-agent",
       "_type": "request",
-      "description": "**Attention!** `config` field is advanced field. Please don't fill fields before didn't get support.\n\nSupported deployments; (`config.deployment`)\n* `docker`\n* `kubernetes`\n\nSupported IP source methods; (`config.sensor.ip_source.method`)\n* tcp\n* header",
+      "description": "**Attention!** `config` field is advanced field. Please don't fill fields before didn't get support.\n\nSupported deployments; (`config.deployment`)\n* `docker`\n* `kubernetes`\n\nSupported IP and Port source methods; (`config.sensor.ip_source.method`, `config.sensor.port_source.method`)\n* tcp\n* header",
       "method": "PUT"
     },
     {
@@ -305,7 +305,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/agents/{{agent_id}}/refresh-token",
+      "_id": "refresh-agent-token",
       "_type": "request",
       "description": "",
       "method": "PUT"
@@ -329,7 +329,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/agents/{{agent_id}}",
+      "_id": "delete-agent",
       "_type": "request",
       "description": "",
       "method": "DELETE"
@@ -360,7 +360,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/domains",
+      "_id": "all-domains",
       "_type": "request",
       "description": "",
       "method": "GET"
@@ -387,7 +387,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/domains",
+      "_id": "create-domain",
       "_type": "request",
       "description": "",
       "method": "POST"
@@ -411,7 +411,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/domains/{{domain_id}}",
+      "_id": "show-domain",
       "_type": "request",
       "description": "",
       "method": "GET"
@@ -438,7 +438,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/domains/{{domain_id}}",
+      "_id": "update-domain",
       "_type": "request",
       "description": "You can update only Ignored Paths. You can't update domain name.\n\nIf you created wrong Domain, you can create a new Domain with correct domain.",
       "method": "PUT"
@@ -479,7 +479,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/integrations",
+      "_id": "create-cloudflare-integration",
       "_type": "request",
       "description": "**Attention!** You can set only `name` and `fields` fields. Please don't change `key` and `type` fields.\n\nSupported Rule Types;\n* IP Access Rule: `access_rule `\n* Firewall Rule: `firewall_rule`",
       "method": "POST"
@@ -506,7 +506,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/integrations/{{integration_id}}",
+      "_id": "update-cloudflare-integration",
       "_type": "request",
       "description": "**Attention!** You can update only `name` and `fields` fields. Please don't change `key` and `type` fields.\n\nSupported Rule Types;\n* IP Access Rule: `access_rule `\n* Firewall Rule: `firewall_rule`",
       "method": "PUT"
@@ -533,7 +533,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/integrations",
+      "_id": "create-aws-waf-integration",
       "_type": "request",
       "description": "**Attention!** You can set only `name` and `fields` fields. Please don't change `key` and `type` fields.",
       "method": "POST"
@@ -560,7 +560,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/integrations/{{integration_id}}",
+      "_id": "update-aws-waf-integration",
       "_type": "request",
       "description": "**Attention!** You can update only `name` and `fields` fields. Please don't change `key` and `type` fields.",
       "method": "PUT"
@@ -594,7 +594,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/integrations",
+      "_id": "create-slack-integration",
       "_type": "request",
       "description": "**Attention!** You can update only `name` and `fields` fields. Please don't change `key` and `type` fields.",
       "method": "POST"
@@ -621,7 +621,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/integrations/{{integration_id}}",
+      "_id": "update-slack-integration",
       "_type": "request",
       "description": "**Attention!** You can update only `name` and `fields` fields. Please don't change `key` and `type` fields.",
       "method": "PUT"
@@ -648,7 +648,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/integrations",
+      "_id": "create-webhook-integration",
       "_type": "request",
       "description": "**Attention!** You can update only `name` and `fields` fields. Please don't change `key` and `type` fields.",
       "method": "POST"
@@ -675,7 +675,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/integrations/{{integration_id}}",
+      "_id": "update-webhook-integration",
       "_type": "request",
       "description": "**Attention!** You can update only `name` and `fields` fields. Please don't change `key` and `type` fields.",
       "method": "PUT"
@@ -702,7 +702,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/integrations",
+      "_id": "create-email-integration",
       "_type": "request",
       "description": "**Attention!** You can update only `name` and `fields` fields. Please don't change `key` and `type` fields.",
       "method": "POST"
@@ -729,7 +729,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/integrations/{{integration_id}}",
+      "_id": "update-email-integration",
       "_type": "request",
       "description": "**Attention!** You can update only `name` and `fields` fields. Please don't change `key` and `type` fields.",
       "method": "PUT"
@@ -753,7 +753,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/integrations",
+      "_id": "all-integrations",
       "_type": "request",
       "description": "",
       "method": "GET"
@@ -777,7 +777,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/integrations/{{integration_id}}",
+      "_id": "show-integration",
       "_type": "request",
       "description": "",
       "method": "GET"
@@ -801,7 +801,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/integrations/{{integration_id}}/send-test-message",
+      "_id": "send-test-message",
       "_type": "request",
       "description": "",
       "method": "GET"
@@ -825,7 +825,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/integrations/{{integration_id}}",
+      "_id": "delete-integration",
       "_type": "request",
       "description": "",
       "method": "DELETE"
@@ -856,7 +856,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/triggers",
+      "_id": "all-trigger-rules",
       "_type": "request",
       "description": "",
       "method": "GET"
@@ -883,7 +883,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/triggers",
+      "_id": "create-trigger-rule",
       "_type": "request",
       "description": "Supported operators;\n* Greater than: `>`\n* Lesser than: `<`",
       "method": "POST"
@@ -907,7 +907,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/triggers/{{trigger_id}}",
+      "_id": "show-trigger-rule",
       "_type": "request",
       "description": "",
       "method": "GET"
@@ -934,7 +934,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/triggers/{{trigger_id}}",
+      "_id": "update-trigger-rule",
       "_type": "request",
       "description": "You can update only Trigger Rule name. You can't update Integration, Risk Score or Operator.\n\nIf you created wrong Trigger Rule, you can delete wrong Trigger Rule and create a new correct Trigger Rule.",
       "method": "PUT"
@@ -958,7 +958,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/triggers/{{trigger_id}}",
+      "_id": "delete-trigger-rule",
       "_type": "request",
       "description": "",
       "method": "DELETE"
@@ -982,7 +982,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/triggers/{{trigger_id}}}/history",
+      "_id": "show-trigger-rules-history",
       "_type": "request",
       "description": "",
       "method": "GET"
@@ -1013,7 +1013,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/users",
+      "_id": "all-users",
       "_type": "request",
       "description": "",
       "method": "GET"
@@ -1040,7 +1040,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/users",
+      "_id": "create-user",
       "_type": "request",
       "description": "",
       "method": "POST"
@@ -1064,7 +1064,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/users/{{user_id}}",
+      "_id": "show-user",
       "_type": "request",
       "description": "",
       "method": "GET"
@@ -1088,7 +1088,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/users/{{user_id}}/history",
+      "_id": "show-users-activity-logs",
       "_type": "request",
       "description": "",
       "method": "GET"
@@ -1115,7 +1115,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/users/{{user_id}}",
+      "_id": "update-user",
       "_type": "request",
       "description": "",
       "method": "PUT"
@@ -1139,7 +1139,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/users/{{user_id}}",
+      "_id": "delete-user",
       "_type": "request",
       "description": "",
       "method": "DELETE"
@@ -1170,7 +1170,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/permissions",
+      "_id": "all-permissions",
       "_type": "request",
       "description": "You will need permission names when you are creating or updating roles.",
       "method": "GET"
@@ -1194,7 +1194,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/roles",
+      "_id": "all-roles",
       "_type": "request",
       "description": "",
       "method": "GET"
@@ -1221,7 +1221,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/roles",
+      "_id": "create-role",
       "_type": "request",
       "description": "You can find all permission names list in **All Permissions** endpoint.",
       "method": "POST"
@@ -1245,7 +1245,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/roles/{{role_id}}",
+      "_id": "show-role",
       "_type": "request",
       "description": "",
       "method": "GET"
@@ -1272,7 +1272,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/roles/{{role_id}}",
+      "_id": "update-role",
       "_type": "request",
       "description": "You can find all permission names list in **All Permissions** endpoint.",
       "method": "PUT"
@@ -1296,7 +1296,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/roles/{{role_id}}",
+      "_id": "delete-role",
       "_type": "request",
       "description": "",
       "method": "DELETE"
@@ -1327,7 +1327,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/activity_logs",
+      "_id": "activity-logs",
       "_type": "request",
       "description": "",
       "method": "GET"
@@ -1366,7 +1366,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/settings/profile",
+      "_id": "show-profile",
       "_type": "request",
       "description": "",
       "method": "GET"
@@ -1393,7 +1393,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/settings/profile",
+      "_id": "update-profile",
       "_type": "request",
       "description": "",
       "method": "POST"
@@ -1417,7 +1417,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/settings/profile",
+      "_id": "refresh-api-token",
       "_type": "request",
       "description": "",
       "method": "PUT"
@@ -1448,7 +1448,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/settings/company",
+      "_id": "show-company",
       "_type": "request",
       "description": "",
       "method": "GET"
@@ -1475,7 +1475,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/settings/company",
+      "_id": "update-company",
       "_type": "request",
       "description": "",
       "method": "POST"
@@ -1499,7 +1499,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/change-locale/{{locale}}",
+      "_id": "change-locale",
       "_type": "request",
       "description": "Supported locales;\n* `en`\n* `tr`",
       "method": "GET"
@@ -1523,7 +1523,7 @@
         }
       ],
       "authentication": {},
-      "_id": "/",
+      "_id": "check-api-status",
       "_type": "request",
       "description": "",
       "method": "GET"
@@ -1541,7 +1541,7 @@
       "parentId": "__WORKSPACE_ID__",
       "name": "StrixEye Environment",
       "data": {
-        "base_url": "https://api.strixeye.com"
+        "base_url": "https://api.usestrix.com"
       },
       "dataPropertyOrder": null,
       "color": null,
