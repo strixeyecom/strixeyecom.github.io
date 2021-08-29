@@ -1,7 +1,7 @@
 {
   "_type": "export",
   "__export_format": 4,
-  "__export_date": "2021-08-26T14:51:02.049Z",
+  "__export_date": "2021-08-29T19:28:28.084Z",
   "__export_source": "insomnia.importers:v0.1.0",
   "resources": [
     {
@@ -1541,7 +1541,7 @@
       "parentId": "__WORKSPACE_ID__",
       "name": "StrixEye Environment",
       "data": {
-        "base_url": "https://api.usestrix.com"
+        "base_url": "https://api.strixeye.com"
       },
       "dataPropertyOrder": null,
       "color": null,
