@@ -30,7 +30,7 @@ If successfully integrated, you can start using it.
 
 Select a Incident Response Integration (e.g. Cloudflare) and create an Integration. After creation, you must verify it. Visit the Integration detail page and click the **Integrate** button. 
 
-First of all, create a custom Cloudflare API token from [Cloudflare Dashboard](https://dash.cloudflare.com/profile/api-tokens) with Zone Firewall Edit permission.
+First of all, create a custom Cloudflare API token from [Cloudflare Dashboard](https://dash.cloudflare.com/profile/api-tokens){:target="_blank"} with Zone Firewall Edit permission.
 
 ![cloudflare api token set zone firewall edit permission](assets/images/zone_firewall_edit.png)
 
