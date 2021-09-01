@@ -33,11 +33,17 @@ This card's header shows the Agent's name, Agent's IP address and Agent's status
 
 If you want to mirror over HTTPS, you need to turn on the **Use HTTPS** switch and then give the TLS certificate and TLS key paths.
 
-**Proxy** field specifies which software to use for the mirroring. For example, if you use Nginx as load balancer or reverse proxy, you must select Nginx. 
-
-**Strixeye Agent Port** field specifies which port will use by StrixEye. And it is the port that you must mirror the requests.
+**Strixeye Sensor Port** field specifies which port will use by StrixEye. And it is the port that you must mirror the requests.
 
 **System Stats Interval** field specifies how often you want to send system statistics. 
+
+**IP Source** field specifies the how send the original request's IP address to the Agent. It takes 2 value, *TCP Source Flag* and *HTTP Header*. If you send the original IP address in TCP packet, you must select *TCP Source Flag*. If you send the original IP address in HTTP header, you must select *HTTP Header* and you must set the *Header Name* and *Value Index*.
+
+For example, you send the original IP address in HTTP Heeder with X-Forwarded-For with multiple IP and original IP is 3th one, you can do like this:
+
+![agent name and agent domains](../assets/images/agent_ip_source.png)
+
+**Port Source** field specifies the how send the original request's port to the Agent. It takes 2 value, *TCP Source Flag* and *HTTP Header*. If you send the original Port in TCP packet, you must select *TCP Source Flag*. If you send the original Port in HTTP header, you must select *HTTP Header* and you must set the *Header Name* and *Value Index*.
 
 **Runtime Environment** field specifies which runtime environment you want to use. We only support Docker and Kubernetes for now. If you want to use Kubernetes, you can use your own config file.
 
