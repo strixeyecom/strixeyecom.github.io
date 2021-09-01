@@ -20,7 +20,7 @@ We support two types of integrations: **Notification Integration** and **Inciden
 
 **Incident Response** integrations are active Integrations. For example, when a Suspect detected, Cloudflare Integration block this Suspect.
 
-First of all, create a custom Cloudflare API token from [Cloudflare Dashboard](https://dash.cloudflare.com/profile/api-tokens) with Zone Firewall Edit permission.
+First of all, create a custom Cloudflare API token from [Cloudflare Dashboard](https://dash.cloudflare.com/profile/api-tokens){:target="_blank"} with Zone Firewall Edit permission.
 
 ![cloudflare api token set zone firewall edit permission](../assets/images/zone_firewall_edit.png)
 

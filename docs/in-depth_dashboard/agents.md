@@ -87,7 +87,7 @@ Broker is a RabbitMQ container that improves the performance of the Agent.
 
 **Broker Username** field specifies the username of the Broker.
 
-**Broker Prefix** field specifies the protocol of the Broker. You can access supported protocols [here](https://www.rabbitmq.com/protocols.html)
+**Broker Prefix** field specifies the protocol of the Broker. You can access supported protocols [here](https://www.rabbitmq.com/protocols.html){:target="_blank"}
 
 **Broker Password** field specifies the password of the Broker.
 
