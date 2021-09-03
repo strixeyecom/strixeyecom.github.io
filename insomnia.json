@@ -1,0 +1,1552 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2021-08-29T19:28:28.084Z",
+  "__export_source": "insomnia.importers:v0.1.0",
+  "resources": [
+    {
+      "parentId": "__WORKSPACE_ID__",
+      "name": "StrixEye API",
+      "environment": {
+        "domain": "https://api.strixeye.com",
+        "api_token": ""
+      },
+      "_id": "__GRP_1__",
+      "_type": "request_group",
+      "description": "",
+      "variable": {
+        "domain": "https://api.strixeye.com",
+        "api_token": ""
+      }
+    },
+    {
+      "parentId": "__GRP_1__",
+      "name": "Suspects",
+      "environment": {},
+      "_id": "__GRP_2__",
+      "_type": "request_group"
+    },
+    {
+      "parentId": "__GRP_2__",
+      "name": "All Suspects",
+      "url": "{{base_url}}/suspects",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "all-suspects",
+      "_type": "request",
+      "description": "",
+      "method": "GET"
+    },
+    {
+      "parentId": "__GRP_2__",
+      "name": "Show Suspect",
+      "url": "{{base_url}}/suspects/{{suspect_id}}",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "show-suspect",
+      "_type": "request",
+      "description": "",
+      "method": "GET"
+    },
+    {
+      "parentId": "__GRP_1__",
+      "name": "Suspicions",
+      "environment": {},
+      "_id": "__GRP_3__",
+      "_type": "request_group"
+    },
+    {
+      "parentId": "__GRP_3__",
+      "name": "All Suspicions",
+      "url": "{{base_url}}/suspicions",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "all-suspicions",
+      "_type": "request",
+      "description": "",
+      "method": "GET"
+    },
+    {
+      "parentId": "__GRP_3__",
+      "name": "Get Suspicions by Suspect",
+      "url": "{{base_url}}/suspicions?suspect_id={{suspect_id}}",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "get-suspicions-by-suspect",
+      "_type": "request",
+      "description": "",
+      "method": "GET"
+    },
+    {
+      "parentId": "__GRP_3__",
+      "name": "Show Suspicion",
+      "url": "{{base_url}}/suspicions/{{suspicion_id}}",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "show-suspicion",
+      "_type": "request",
+      "description": "",
+      "method": "GET"
+    },
+    {
+      "parentId": "__GRP_3__",
+      "name": "Show Suspicion History",
+      "url": "{{base_url}}/suspicions/{{suspicion_id}}/history",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "show-suspicion-history",
+      "_type": "request",
+      "description": "",
+      "method": "GET"
+    },
+    {
+      "parentId": "__GRP_1__",
+      "name": "Agents",
+      "environment": {},
+      "_id": "__GRP_4__",
+      "_type": "request_group"
+    },
+    {
+      "parentId": "__GRP_4__",
+      "name": "All Agents",
+      "url": "{{base_url}}/agents",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "all-agents",
+      "_type": "request",
+      "description": "",
+      "method": "GET"
+    },
+    {
+      "parentId": "__GRP_4__",
+      "name": "Create Agent",
+      "url": "{{base_url}}/agents",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"name\": \"New agent\",\n    \"domains\": [\n        \"{{domain_id}}\"\n    ],\n    \"config\": {\n        \"addresses\": {\n            \"connector_scheme\": null,\n            \"connector_address\": null,\n            \"connector_port\": null\n        },\n        \"use_https\": null,\n        \"deployment\": \"docker\",\n        \"database\": {\n            \"db_enabled\": \"on\",\n            \"db_addr\": null,\n            \"db_user\": null,\n            \"db_pass\": null,\n            \"db_root_pass\": null,\n            \"db_name\": null,\n            \"db_port\": null\n        },\n        \"broker\": {\n            \"broker_enabled\": \"on\",\n            \"broker_hostname\": null,\n            \"broker_username\": null,\n            \"broker_prefix\": null,\n            \"broker_password\":null,\n            \"broker_port\": null\n        },\n        \"scheduler\": {\n            \"scheduler_listen\": null,\n            \"scheduler_host\": null\n        },\n        \"engine\": {\n            \"address\": null,\n            \"engine_listen\": null\n        },\n        \"sensor\": {\n            \"ip_source\": {\n                \"method\": \"header\",\n                \"header_name\": \"X-Forwarded-For\",\n                \"header_value_index\": 2\n            },\n            \"port_source\": {\n                \"method\": \"header\",\n                \"header_name\": \"X-Forwarded-Port\",\n                \"header_value_index\": 2\n            },\n            \"sensor_listen\": 32122\n        },\n        \"profiler\": {\n            \"profiler_listen\": null\n        },\n        \"intervals\": {\n            \"system_stats_interval_second\": 1\n        },\n        \"paths\": {\n            \"kube_config\": null,\n            \"tls_keys\": {\n                \"certificate\": null,\n                \"key\": null\n            }\n        }\n    }\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "create-agent",
+      "_type": "request",
+      "description": "**Attention!** `config` field is advanced field. Please don't fill fields before didn't get support.\n\nSupported deployments; (`config.deployment`)\n* `docker`\n* `kubernetes`\n\nSupported IP and Port source methods; (`config.sensor.ip_source.method`, `config.sensor.port_source.method`)\n* tcp\n* header",
+      "method": "POST"
+    },
+    {
+      "parentId": "__GRP_4__",
+      "name": "Show Agent",
+      "url": "{{base_url}}/agents/{{agent_id}}",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "show-agent",
+      "_type": "request",
+      "description": "",
+      "method": "GET"
+    },
+    {
+      "parentId": "__GRP_4__",
+      "name": "Update Agent",
+      "url": "{{base_url}}/agents/{{agent_id}}",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"name\": \"Updated agent\",\n    \"domains\": [\n        \"{{domain_id}}\"\n    ],\n    \"config\": {\n        \"addresses\": {\n            \"connector_scheme\": null,\n            \"connector_address\": null,\n            \"connector_port\": null\n        },\n        \"use_https\": null,\n        \"deployment\": \"docker\",\n        \"database\": {\n            \"db_enabled\": \"on\",\n            \"db_addr\": null,\n            \"db_user\": null,\n            \"db_pass\": null,\n            \"db_root_pass\": null,\n            \"db_name\": null,\n            \"db_port\": null\n        },\n        \"broker\": {\n            \"broker_enabled\": \"on\",\n            \"broker_hostname\": null,\n            \"broker_username\": null,\n            \"broker_prefix\": null,\n            \"broker_password\":null,\n            \"broker_port\": null\n        },\n        \"scheduler\": {\n            \"scheduler_listen\": null,\n            \"scheduler_host\": null\n        },\n        \"engine\": {\n            \"address\": null,\n            \"engine_listen\": null\n        },\n        \"sensor\": {\n            \"ip_source\": {\n                \"method\": \"tcp\",\n                \"header_name\": null,\n                \"header_value_index\": null\n            },\n            \"port_source\": {\n                \"method\": \"tcp\",\n                \"header_name\": null,\n                \"header_value_index\": null\n            },\n            \"sensor_listen\": 32122\n        },\n        \"profiler\": {\n            \"profiler_listen\": null\n        },\n        \"intervals\": {\n            \"system_stats_interval_second\": 1\n        },\n        \"paths\": {\n            \"kube_config\": null,\n            \"tls_keys\": {\n                \"certificate\": null,\n                \"key\": null\n            }\n        }\n    }\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "update-agent",
+      "_type": "request",
+      "description": "**Attention!** `config` field is advanced field. Please don't fill fields before didn't get support.\n\nSupported deployments; (`config.deployment`)\n* `docker`\n* `kubernetes`\n\nSupported IP and Port source methods; (`config.sensor.ip_source.method`, `config.sensor.port_source.method`)\n* tcp\n* header",
+      "method": "PUT"
+    },
+    {
+      "parentId": "__GRP_4__",
+      "name": "Refresh Agent Token",
+      "url": "{{base_url}}/agents/{{agent_id}}/refresh-token",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "refresh-agent-token",
+      "_type": "request",
+      "description": "",
+      "method": "PUT"
+    },
+    {
+      "parentId": "__GRP_4__",
+      "name": "Delete Agent",
+      "url": "{{base_url}}/agents/{{agent_id}}",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "delete-agent",
+      "_type": "request",
+      "description": "",
+      "method": "DELETE"
+    },
+    {
+      "parentId": "__GRP_1__",
+      "name": "Domains",
+      "environment": {},
+      "_id": "__GRP_5__",
+      "_type": "request_group"
+    },
+    {
+      "parentId": "__GRP_5__",
+      "name": "All Domains",
+      "url": "{{base_url}}/domains",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "all-domains",
+      "_type": "request",
+      "description": "",
+      "method": "GET"
+    },
+    {
+      "parentId": "__GRP_5__",
+      "name": "Create Domain",
+      "url": "{{base_url}}/domains",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"domain\": \"{{domain}}\",\n    \"ignored_paths\": [\n        \"/docs/\",\n        \"/statics/\"\n    ]\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "create-domain",
+      "_type": "request",
+      "description": "",
+      "method": "POST"
+    },
+    {
+      "parentId": "__GRP_5__",
+      "name": "Show Domain",
+      "url": "{{base_url}}/domains/{{domain_id}}",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "show-domain",
+      "_type": "request",
+      "description": "",
+      "method": "GET"
+    },
+    {
+      "parentId": "__GRP_5__",
+      "name": "Update Domain",
+      "url": "{{base_url}}/domains/{{domain_id}}",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"ignored_paths\": [\n        \"/docs/\",\n        \"/statics/\",\n        \"/images/\"\n    ]\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "update-domain",
+      "_type": "request",
+      "description": "You can update only Ignored Paths. You can't update domain name.\n\nIf you created wrong Domain, you can create a new Domain with correct domain.",
+      "method": "PUT"
+    },
+    {
+      "parentId": "__GRP_1__",
+      "name": "Integrations",
+      "environment": {},
+      "_id": "__GRP_6__",
+      "_type": "request_group"
+    },
+    {
+      "parentId": "__GRP_6__",
+      "name": "Incident Response Integrations",
+      "environment": {},
+      "_id": "__GRP_7__",
+      "_type": "request_group"
+    },
+    {
+      "parentId": "__GRP_7__",
+      "name": "Create Cloudflare Integration",
+      "url": "{{base_url}}/integrations",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"name\": \"CloudFlare integration name\",\n    \"fields\": {\n        \"zone_id\": \"{{zone_id}}\",\n        \"access_token\": \"{{access_token}}\",\n        \"rule_type\": \"{{rule_type}}\"\n    },\n    \"key\": \"cloudflare\",\n    \"type\": \"response\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "create-cloudflare-integration",
+      "_type": "request",
+      "description": "**Attention!** You can set only `name` and `fields` fields. Please don't change `key` and `type` fields.\n\nSupported Rule Types;\n* IP Access Rule: `access_rule `\n* Firewall Rule: `firewall_rule`",
+      "method": "POST"
+    },
+    {
+      "parentId": "__GRP_7__",
+      "name": "Update Cloudflare Integration",
+      "url": "{{base_url}}/integrations/{{integration_id}}",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"name\": \"CloudFlare integration new name\",\n    \"fields\": {\n        \"zone_id\": \"{{zone_id}}\",\n        \"access_token\": \"{{access_token}}\",\n        \"rule_type\": \"{{rule_type}}\"\n    },\n    \"key\": \"cloudflare\",\n    \"type\": \"response\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "update-cloudflare-integration",
+      "_type": "request",
+      "description": "**Attention!** You can update only `name` and `fields` fields. Please don't change `key` and `type` fields.\n\nSupported Rule Types;\n* IP Access Rule: `access_rule `\n* Firewall Rule: `firewall_rule`",
+      "method": "PUT"
+    },
+    {
+      "parentId": "__GRP_7__",
+      "name": "Create AWS WAF Integration",
+      "url": "{{base_url}}/integrations",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"name\": \"AWS WAF integration name\",\n    \"fields\": {\n        \"key\": \"{{access_key_id}}\",\n        \"secret\": \"{{secret_access_key}}\",\n        \"region\": \"{{region}}\"\n    },\n    \"key\": \"aws_waf\",\n    \"type\": \"response\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "create-aws-waf-integration",
+      "_type": "request",
+      "description": "**Attention!** You can set only `name` and `fields` fields. Please don't change `key` and `type` fields.",
+      "method": "POST"
+    },
+    {
+      "parentId": "__GRP_7__",
+      "name": "Update AWS WAF Integration",
+      "url": "{{base_url}}/integrations/{{integration_id}}",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"name\": \"AWS WAF integration new name\",\n    \"fields\": {\n        \"key\": \"{{access_key_id}}\",\n        \"secret\": \"{{secret_access_key}}\",\n        \"region\": \"{{region}}\"\n    },\n    \"key\": \"aws_waf\",\n    \"type\": \"response\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "update-aws-waf-integration",
+      "_type": "request",
+      "description": "**Attention!** You can update only `name` and `fields` fields. Please don't change `key` and `type` fields.",
+      "method": "PUT"
+    },
+    {
+      "parentId": "__GRP_6__",
+      "name": "Notification Integrations",
+      "environment": {},
+      "_id": "__GRP_8__",
+      "_type": "request_group"
+    },
+    {
+      "parentId": "__GRP_8__",
+      "name": "Create Slack Integration",
+      "url": "{{base_url}}/integrations",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"name\": \"Slack integration name\",\n    \"fields\": {\n        \"webhook_url\": \"{{webhook_url}}\"\n    },\n    \"key\": \"slack\",\n    \"type\": \"notification\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "create-slack-integration",
+      "_type": "request",
+      "description": "**Attention!** You can update only `name` and `fields` fields. Please don't change `key` and `type` fields.",
+      "method": "POST"
+    },
+    {
+      "parentId": "__GRP_8__",
+      "name": "Update Slack Integration",
+      "url": "{{base_url}}/integrations/{{integration_id}}",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"name\": \"Slack integration new name\",\n    \"fields\": {\n        \"webhook_url\": \"{{webhook_url}}\"\n    },\n    \"key\": \"slack\",\n    \"type\": \"notification\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "update-slack-integration",
+      "_type": "request",
+      "description": "**Attention!** You can update only `name` and `fields` fields. Please don't change `key` and `type` fields.",
+      "method": "PUT"
+    },
+    {
+      "parentId": "__GRP_8__",
+      "name": "Create Webhook Integration",
+      "url": "{{base_url}}/integrations",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"name\": \"Webhook integration name\",\n    \"fields\": {\n        \"url\": \"{{url}}\"\n    },\n    \"key\": \"webhook\",\n    \"type\": \"notification\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "create-webhook-integration",
+      "_type": "request",
+      "description": "**Attention!** You can update only `name` and `fields` fields. Please don't change `key` and `type` fields.",
+      "method": "POST"
+    },
+    {
+      "parentId": "__GRP_8__",
+      "name": "Update Webhook Integration",
+      "url": "{{base_url}}/integrations/{{integration_id}}",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"name\": \"Webhook integration new name\",\n    \"fields\": {\n        \"url\": \"{{url}}\"\n    },\n    \"key\": \"webhook\",\n    \"type\": \"notification\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "update-webhook-integration",
+      "_type": "request",
+      "description": "**Attention!** You can update only `name` and `fields` fields. Please don't change `key` and `type` fields.",
+      "method": "PUT"
+    },
+    {
+      "parentId": "__GRP_8__",
+      "name": "Create Email Integration",
+      "url": "{{base_url}}/integrations",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"name\": \"Email integration name\",\n    \"fields\": {\n        \"email\": \"{{email_address}}\"\n    },\n    \"key\": \"email\",\n    \"type\": \"notification\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "create-email-integration",
+      "_type": "request",
+      "description": "**Attention!** You can update only `name` and `fields` fields. Please don't change `key` and `type` fields.",
+      "method": "POST"
+    },
+    {
+      "parentId": "__GRP_8__",
+      "name": "Update Email Integration",
+      "url": "{{base_url}}/integrations/{{integration_id}}",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"name\": \"Email integration new name\",\n    \"fields\": {\n        \"email\": \"{{email_address}}\"\n    },\n    \"key\": \"email\",\n    \"type\": \"notification\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "update-email-integration",
+      "_type": "request",
+      "description": "**Attention!** You can update only `name` and `fields` fields. Please don't change `key` and `type` fields.",
+      "method": "PUT"
+    },
+    {
+      "parentId": "__GRP_6__",
+      "name": "All Integrations",
+      "url": "{{base_url}}/integrations",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "all-integrations",
+      "_type": "request",
+      "description": "",
+      "method": "GET"
+    },
+    {
+      "parentId": "__GRP_6__",
+      "name": "Show Integration",
+      "url": "{{base_url}}/integrations/{{integration_id}}",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "show-integration",
+      "_type": "request",
+      "description": "",
+      "method": "GET"
+    },
+    {
+      "parentId": "__GRP_6__",
+      "name": "Send Test Message",
+      "url": "{{base_url}}/integrations/{{integration_id}}/send-test-message",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "send-test-message",
+      "_type": "request",
+      "description": "",
+      "method": "GET"
+    },
+    {
+      "parentId": "__GRP_6__",
+      "name": "Delete Integration",
+      "url": "{{base_url}}/integrations/{{integration_id}}",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "delete-integration",
+      "_type": "request",
+      "description": "",
+      "method": "DELETE"
+    },
+    {
+      "parentId": "__GRP_1__",
+      "name": "Trigger Rules",
+      "environment": {},
+      "_id": "__GRP_9__",
+      "_type": "request_group"
+    },
+    {
+      "parentId": "__GRP_9__",
+      "name": "All Trigger Rules",
+      "url": "{{base_url}}/triggers",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "all-trigger-rules",
+      "_type": "request",
+      "description": "",
+      "method": "GET"
+    },
+    {
+      "parentId": "__GRP_9__",
+      "name": "Create Trigger Rule",
+      "url": "{{base_url}}/triggers",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"name\": \"Block suspect if they risk score is greater than 82\",\n    \"operator\": \">\",\n    \"score\": 82,\n    \"integration_id\": \"{{integration_id}}\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "create-trigger-rule",
+      "_type": "request",
+      "description": "Supported operators;\n* Greater than: `>`\n* Lesser than: `<`",
+      "method": "POST"
+    },
+    {
+      "parentId": "__GRP_9__",
+      "name": "Show Trigger Rule",
+      "url": "{{base_url}}/triggers/{{trigger_id}}",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "show-trigger-rule",
+      "_type": "request",
+      "description": "",
+      "method": "GET"
+    },
+    {
+      "parentId": "__GRP_9__",
+      "name": "Update Trigger Rule",
+      "url": "{{base_url}}/triggers/{{trigger_id}}",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"name\": \"New trigger rule name.\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "update-trigger-rule",
+      "_type": "request",
+      "description": "You can update only Trigger Rule name. You can't update Integration, Risk Score or Operator.\n\nIf you created wrong Trigger Rule, you can delete wrong Trigger Rule and create a new correct Trigger Rule.",
+      "method": "PUT"
+    },
+    {
+      "parentId": "__GRP_9__",
+      "name": "Delete Trigger Rule",
+      "url": "{{base_url}}/triggers/{{trigger_id}}",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "delete-trigger-rule",
+      "_type": "request",
+      "description": "",
+      "method": "DELETE"
+    },
+    {
+      "parentId": "__GRP_9__",
+      "name": "Show Trigger Rule's History",
+      "url": "{{base_url}}/triggers/{{trigger_id}}}/history",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "show-trigger-rules-history",
+      "_type": "request",
+      "description": "",
+      "method": "GET"
+    },
+    {
+      "parentId": "__GRP_1__",
+      "name": "Users",
+      "environment": {},
+      "_id": "__GRP_10__",
+      "_type": "request_group"
+    },
+    {
+      "parentId": "__GRP_10__",
+      "name": "All Users",
+      "url": "{{base_url}}/users",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "all-users",
+      "_type": "request",
+      "description": "",
+      "method": "GET"
+    },
+    {
+      "parentId": "__GRP_10__",
+      "name": "Create User",
+      "url": "{{base_url}}/users",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"name\": \"Wile E. Coyote\",\n    \"email\": \"coyote@acme.corp\",\n    \"role_id\": \"{{role_id}}\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "create-user",
+      "_type": "request",
+      "description": "",
+      "method": "POST"
+    },
+    {
+      "parentId": "__GRP_10__",
+      "name": "Show User",
+      "url": "{{base_url}}/users/{{user_id}}",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "show-user",
+      "_type": "request",
+      "description": "",
+      "method": "GET"
+    },
+    {
+      "parentId": "__GRP_10__",
+      "name": "Show User's Activity Logs",
+      "url": "{{base_url}}/users/{{user_id}}/history",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "show-users-activity-logs",
+      "_type": "request",
+      "description": "",
+      "method": "GET"
+    },
+    {
+      "parentId": "__GRP_10__",
+      "name": "Update User",
+      "url": "{{base_url}}/users/{{user_id}}",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"name\": \"Wile E. Coyote\",\n    \"email\": \"coyote@acme.corp\",\n    \"locale\" : \"en\",\n    \"role_id\": \"{{role_id}}\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "update-user",
+      "_type": "request",
+      "description": "",
+      "method": "PUT"
+    },
+    {
+      "parentId": "__GRP_10__",
+      "name": "Delete User",
+      "url": "{{base_url}}/users/{{user_id}}",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "delete-user",
+      "_type": "request",
+      "description": "",
+      "method": "DELETE"
+    },
+    {
+      "parentId": "__GRP_1__",
+      "name": "Roles",
+      "environment": {},
+      "_id": "__GRP_11__",
+      "_type": "request_group"
+    },
+    {
+      "parentId": "__GRP_11__",
+      "name": "All Permissions",
+      "url": "{{base_url}}/permissions",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "all-permissions",
+      "_type": "request",
+      "description": "You will need permission names when you are creating or updating roles.",
+      "method": "GET"
+    },
+    {
+      "parentId": "__GRP_11__",
+      "name": "All Roles",
+      "url": "{{base_url}}/roles",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "all-roles",
+      "_type": "request",
+      "description": "",
+      "method": "GET"
+    },
+    {
+      "parentId": "__GRP_11__",
+      "name": "Create Role",
+      "url": "{{base_url}}/roles",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"name\": \"RedTeam Member\",\n    \"permissions\": {\n        \"suspects.index\": \"on\",\n        \"suspicions.show\": \"on\"\n    }\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "create-role",
+      "_type": "request",
+      "description": "You can find all permission names list in **All Permissions** endpoint.",
+      "method": "POST"
+    },
+    {
+      "parentId": "__GRP_11__",
+      "name": "Show Role",
+      "url": "{{base_url}}/roles/{{role_id}}",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "show-role",
+      "_type": "request",
+      "description": "",
+      "method": "GET"
+    },
+    {
+      "parentId": "__GRP_11__",
+      "name": "Update Role",
+      "url": "{{base_url}}/roles/{{role_id}}",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"name\": \"SOC Team Member\",\n    \"permissions\": {\n        \"suspicions.show\": \"on\",\n        \"agents.index\": \"on\"\n    }\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "update-role",
+      "_type": "request",
+      "description": "You can find all permission names list in **All Permissions** endpoint.",
+      "method": "PUT"
+    },
+    {
+      "parentId": "__GRP_11__",
+      "name": "Delete Role",
+      "url": "{{base_url}}/roles/{{role_id}}",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "delete-role",
+      "_type": "request",
+      "description": "",
+      "method": "DELETE"
+    },
+    {
+      "parentId": "__GRP_1__",
+      "name": "Activity Logs",
+      "environment": {},
+      "_id": "__GRP_12__",
+      "_type": "request_group"
+    },
+    {
+      "parentId": "__GRP_12__",
+      "name": "Activity Logs",
+      "url": "{{base_url}}/activity_logs",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "activity-logs",
+      "_type": "request",
+      "description": "",
+      "method": "GET"
+    },
+    {
+      "parentId": "__GRP_1__",
+      "name": "Settings",
+      "environment": {},
+      "_id": "__GRP_13__",
+      "_type": "request_group",
+      "description": "Test description."
+    },
+    {
+      "parentId": "__GRP_13__",
+      "name": "Profile",
+      "environment": {},
+      "_id": "__GRP_14__",
+      "_type": "request_group"
+    },
+    {
+      "parentId": "__GRP_14__",
+      "name": "Show Profile",
+      "url": "{{base_url}}/settings/profile",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "show-profile",
+      "_type": "request",
+      "description": "",
+      "method": "GET"
+    },
+    {
+      "parentId": "__GRP_14__",
+      "name": "Update profile",
+      "url": "{{base_url}}/settings/profile",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"name\": \"Wile E. Coyote\",\n    \"password\" : \"12345678\",\n    \"password_confirmation\" : \"12345678\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "update-profile",
+      "_type": "request",
+      "description": "",
+      "method": "POST"
+    },
+    {
+      "parentId": "__GRP_14__",
+      "name": "Refresh API Token",
+      "url": "{{base_url}}/settings/profile",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "refresh-api-token",
+      "_type": "request",
+      "description": "",
+      "method": "PUT"
+    },
+    {
+      "parentId": "__GRP_13__",
+      "name": "Company",
+      "environment": {},
+      "_id": "__GRP_15__",
+      "_type": "request_group"
+    },
+    {
+      "parentId": "__GRP_15__",
+      "name": "Show Company",
+      "url": "{{base_url}}/settings/company",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "show-company",
+      "_type": "request",
+      "description": "",
+      "method": "GET"
+    },
+    {
+      "parentId": "__GRP_15__",
+      "name": "Update Company",
+      "url": "{{base_url}}/settings/company",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"name\" : \"Acme Corp.\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "update-company",
+      "_type": "request",
+      "description": "",
+      "method": "POST"
+    },
+    {
+      "parentId": "__GRP_13__",
+      "name": "Change Locale",
+      "url": "{{base_url}}/change-locale/{{locale}}",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "change-locale",
+      "_type": "request",
+      "description": "Supported locales;\n* `en`\n* `tr`",
+      "method": "GET"
+    },
+    {
+      "parentId": "__GRP_1__",
+      "name": "Check API Status",
+      "url": "{{base_url}}/",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept-Language",
+          "value": "en-US",
+          "description": ""
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{api_token}}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "_id": "check-api-status",
+      "_type": "request",
+      "description": "",
+      "method": "GET"
+    },
+    {
+      "_id": "__WORKSPACE_ID__",
+      "parentId": null,
+      "name": "StrixEye",
+      "description": "",
+      "scope": "debug",
+      "_type": "workspace"
+    },
+    {
+      "_id": "__ENV1__",
+      "parentId": "__WORKSPACE_ID__",
+      "name": "StrixEye Environment",
+      "data": {
+        "base_url": "https://api.strixeye.com"
+      },
+      "dataPropertyOrder": null,
+      "color": null,
+      "isPrivate": false,
+      "_type": "environment"
+    }
+  ]
+}

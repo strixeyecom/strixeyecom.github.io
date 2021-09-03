@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+.md-header {
+  background-color: #7a2aa4;
+}
+
+.md-header__right {
+  display: flex;
+  margin-left: auto;
+}
+
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  height: 1.8rem;
+  width: auto;
+}
+
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #7a2aa4;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #8a95ff;
+}
+
+.header-menu {
+  height: 2.4rem;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+  display: flex;
+  align-items: center;
+  font-size: 0.7rem;
+}
+
+.header-menu-item {
+  height: 1.8rem;
+  display: flex;
+  align-items: center;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+  background-color: rgba(0, 0, 0, 0.26);
+  border-radius: 0.1rem;
+}
+
+.md-nav--primary .md-nav__title .md-logo {
+  margin: 0px;
+  padding: 0px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: .5rem;
+}
+
+.md-nav--primary .md-nav__title .md-logo svg {
+  width: unset;
+}
+
+p>img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 0px 3px #999999;
+  border-radius: 10px;
+}
